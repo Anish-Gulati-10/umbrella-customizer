@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Umbrella Cusromizer</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet" />
+  </head>
+  <body>
+    <section>
+      <div class="umbrellaPreview">
+        <img
+          id="umbrellaImage"
+          src="assets/umbrella/blue.png"
+          alt="Umbrella"
+          loading="lazy" />
+        <img id="logoOverlay" src="" alt="Logo Preview" />
+      </div>
+
+      <div class="controls">
+        <h1>Custom Umbrella</h1>
+        <div class="colorPicker">
+          <button
+            class="color-btn selected"
+            data-color="blue"
+            data-bgcolor="#e1f0ff"
+            style="background-color: #2bb2e5"></button>
+          <button
+            class="color-btn"
+            data-color="pink"
+            data-bgcolor="#fecde6"
+            style="background-color: #d3157a"></button>
+          <button
+            class="color-btn"
+            data-color="yellow"
+            data-bgcolor="#FFFBE6"
+            style="background-color: #ffca1a"></button>
+        </div>
+        <div class="upload-section">
+          <p class="upload-title">Customize your umbrella</p>
+          <p class="upload-desc">Upload a logo for an instant preview.</p>
+          <p class="upload-info">.png and .jpg files only. Max file size is 5MB.</p>
+
+          <label for="uploadInput" class="upload-btn">
+            <img src="assets/upload_icon.svg" alt="Upload Icon" />
+            <span>UPLOAD LOGO</span>
+          </label>
+          <input
+            type="file"
+            id="uploadInput"
+            accept="image/png, image/jpeg"
+            hidden />
+
+          <div class="file-status" id="fileStatus" style="display: none">
+            <img
+              src="assets/spinner.svg"
+              alt="Loading..."
+              class="spinner"
+              id="uploadSpinner" />
+            <span id="fileName">File.png</span>
+            <span class="remove-file" id="removeFileBtn">✕</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
